@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tour details and booking information for Take My Trip Tourism tours">
+    <title>Tour Details - Take My Trip Tourism</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .tour-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tour-gallery-item {
+            height: 250px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .tour-gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .tour-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .booking-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 100px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--color-primary);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: var(--color-background-light);
+            border-radius: var(--radius-md);
+        }
+
+        @media (max-width: 968px) {
+            .tour-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-widget {
+                position: static;
+            }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+
+    <link rel="stylesheet" href="css/design-refresh.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header solid">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-transparent.png" alt="Take My Trip Tourism" class="logo-img">
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn btn-primary btn-whatsapp" data-whatsapp
+                        style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Chat with Us
+                    </a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- TOUR DETAILS -->
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+
+            <!-- Gallery -->
+            <div class="tour-gallery scroll-reveal">
+                <div class="tour-gallery-item">
+                    <img src="images/desert-safari.avif" alt="Desert Safari"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="tour-gallery-item">
+                    <img src="images/city-lights.avif" alt="City Lights"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="tour-gallery-item">
+                    <img src="images/grand-mosque.avif" alt="Grand Mosque"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="tour-gallery-item">
+                    <img src="images/cultural-tour.avif" alt="Cultural Tour"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Content Wrapper -->
+            <div class="tour-content-wrapper">
+
+                <!-- Left Column: Description -->
+                <div>
+                    <h1 class="scroll-reveal">Premium Desert Safari</h1>
+                    <p class="scroll-reveal"
+                        style="font-size: 1.125rem; color: var(--color-text-light); margin-bottom: 2rem;">
+                        Experience the ultimate Arabian adventure
+                    </p>
+
+                    <!-- Description -->
+                    <div class="scroll-reveal">
+                        <h3>About This Tour</h3>
+                        <p>Embark on an unforgettable desert safari adventure in the golden dunes of Dubai. Experience
+                            the thrill of dune bashing, traditional camel riding, and authentic Bedouin hospitality in
+                            the heart of the Arabian desert.</p>
+
+                        <p>Our premium desert safari includes exciting activities, cultural experiences, and a delicious
+                            BBQ dinner under the stars. Watch mesmerizing belly dance and Tanoura performances while
+                            enjoying traditional Arabic cuisine.</p>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="scroll-reveal">
+                        <h3 style="margin-top: 3rem;">Tour Highlights</h3>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🚗</span>
+                                <span>Hotel Pickup & Drop-off</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">👨‍🏫</span>
+                                <span>Expert Guide</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🍽️</span>
+                                <span>BBQ Dinner Included</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🐪</span>
+                                <span>Camel Riding</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🎭</span>
+                                <span>Live Entertainment</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">📸</span>
+                                <span>Photo Opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="scroll-reveal">
+                        <h3 style="margin-top: 3rem;">Itinerary</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4>3:00 PM - Hotel Pickup</h4>
+                                <p>Our comfortable 4x4 vehicle will pick you up from your hotel. Enjoy a scenic drive to
+                                    the desert camp where your adventure begins with thrilling dune bashing.</p>
+                                amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>4:00 PM - Dune Bashing</h4>
+                                <p>Experience thrilling dune bashing in the Arabian desert. Sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>5:30 PM - Camel Riding & Photos</h4>
+                                <p>Enjoy a traditional camel ride and capture stunning sunset photos. Ut enim ad minim
+                                    veniam, quis nostrud exercitation.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>6:30 PM - Bedouin Camp Experience</h4>
+                                <p>Relax at our traditional Bedouin camp with henna painting, shisha, and Arabic coffee.
+                                    Duis aute irure dolor in reprehenderit.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>7:30 PM - BBQ Dinner & Entertainment</h4>
+                                <p>Enjoy a delicious BBQ dinner with live belly dancing and Tanoura shows. Excepteur
+                                    sint occaecat cupidatat non proident.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>9:00 PM - Return to Hotel</h4>
+                                <p>Comfortable drop-off back to your hotel with unforgettable memories. Sunt in culpa
+                                    qui officia deserunt mollit anim.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What to Bring -->
+                    <div class="scroll-reveal">
+                        <h3 style="margin-top: 3rem;">What to Bring</h3>
+                        <ul style="line-height: 2; color: var(--color-text-light);">
+                            <li>Comfortable clothing and closed-toe shoes</li>
+                            <li>Sunglasses and sunscreen</li>
+                            <li>Camera for capturing memories</li>
+                            <li>Light jacket for evening (winter months)</li>
+                            <li>Valid ID or passport copy</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Booking Widget -->
+                <div class="booking-widget scroll-reveal">
+                    <h3 style="margin-bottom: 1.5rem;">Book This Tour</h3>
+
+                    <div style="margin-bottom: 2rem;">
+                        <p class="card-price" style="margin-bottom: 0.5rem;">Starting from AED89</p>
+                        <p style="font-size: 0.875rem; color: var(--color-text-light);">Per person</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Select Date</label>
+                        <input type="date"
+                            style="width: 100%; padding: 0.75rem; border: 2px solid #E2E8F0; border-radius: var(--radius-md); font-family: inherit;">
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Number of Guests</label>
+                        <select
+                            style="width: 100%; padding: 0.75rem; border: 2px solid #E2E8F0; border-radius: var(--radius-md); font-family: inherit;">
+                            <option>1 Guest</option>
+                            <option>2 Guests</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                            <option>5+ Guests</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-whatsapp" data-whatsapp data-tour-name="Premium Desert Safari"
+                        style="width: 100%; margin-bottom: 1rem;">
+                        Enquire on WhatsApp
+                    </button>
+
+                    <a href="contact.html" class="btn btn-outline"
+                        style="width: 100%; text-align: center; display: block;">
+                        Get Custom Quote
+                    </a>
+
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #E2E8F0;">
+                        <h4 style="margin-bottom: 1rem; font-size: 1rem;">Why Book With Us?</h4>
+                        <ul
+                            style="list-style: none; line-height: 2; color: var(--color-text-light); font-size: 0.875rem;">
+                            <li>✓ Best Price Guarantee</li>
+                            <li>✓ Free Cancellation</li>
+                            <li>✓ 24/7 Customer Support</li>
+                            <li>✓ Instant Confirmation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED TOURS -->
+    <section class="section" style="background: var(--color-background-light);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">You May Also Like</h2>
+
+            <div class="grid grid-3">
+                <div class="card scroll-reveal-stagger">
+                    <img src="images/city-lights.avif" alt="Dubai City Lights Tour" class="card-image" loading="lazy">
+                    <div class="card-content">
+                        <h3 class="card-title">Dubai City Lights Tour</h3>
+                        <p class="card-price">Starting from AED75</p>
+                        <a href="tour.html?tour=city-lights" class="btn btn-primary" style="width: 100%;">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <div class="card scroll-reveal-stagger">
+                    <img src="images/grand-mosque.avif" alt="Abu Dhabi Grand Mosque" class="card-image" loading="lazy">
+                    <div class="card-content">
+                        <h3 class="card-title">Abu Dhabi Grand Mosque</h3>
+                        <p class="card-price">Starting from AED65</p>
+                        <a href="tour.html?tour=grand-mosque" class="btn btn-primary" style="width: 100%;">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <div class="card scroll-reveal-stagger">
+                    <img src="images/yacht-cruise.avif" alt="Luxury Yacht Cruise" class="card-image" loading="lazy">
+                    <div class="card-content">
+                        <h3 class="card-title">Luxury Yacht Cruise</h3>
+                        <p class="card-price">Starting from AED150</p>
+                        <a href="tour.html?tour=yacht-cruise" class="btn btn-primary" style="width: 100%;">View
+                            Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-final.png" alt="Take My Trip Tourism"
+                        style="height: 60px; margin-bottom: 1rem;">
+                    <p>Your trusted partner for curated Arabian adventures. Creating unforgettable memories since 2020.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" data-whatsapp>WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Popular Tours</h4>
+                    <ul class="footer-links">
+                        <li><a href="tour.html?tour=desert-safari">Desert Safari</a></li>
+                        <li><a href="tour.html?tour=city-lights">City Tours</a></li>
+                        <li><a href="tour.html?tour=grand-mosque">Grand Mosque</a></li>
+                        <li><a href="packages.html">View All</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@takemytriptourism.com</li>
+                        <li>📱 +971 56 408 3282</li>
+                        <li>📍 Dubai, UAE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Take My Trip Tourism. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY BAR -->
+    <div class="mobile-sticky-bar">
+        <button class="btn btn-whatsapp" data-whatsapp data-tour-name="Premium Desert Safari">
+            Book Now via WhatsApp
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

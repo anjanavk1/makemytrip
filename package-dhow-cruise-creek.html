@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book Dubai Creek Dhow Cruise Dinner. Enjoy a traditional wooden boat cruise with buffet dinner and entertainment.">
+    <title>Dubai Creek Dhow Cruise - Take My Trip Tourism</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/design-refresh.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+
+    <style>
+        .package-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/yacht-cruise.avif');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .package-details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: -3rem;
+            /* Overlap hero */
+            position: relative;
+            z-index: 10;
+            padding-bottom: 4rem;
+        }
+
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .booking-sidebar {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+            border: 1px solid var(--color-primary-light);
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-list li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .package-details-grid {
+                grid-template-columns: 1fr;
+                margin-top: 2rem;
+            }
+
+            .booking-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header solid">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-transparent.png" alt="Take My Trip Tourism" class="logo-img">
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link active">Packages</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn btn-primary btn-whatsapp" data-whatsapp
+                        style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        Chat with Us
+                    </a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="package-hero">
+        <div class="container animate-fadeInUp">
+            <h1 style="font-size: 3rem; margin-bottom: 0.5rem; color: #FFC629;">Dubai Creek Dhow Cruise</h1>
+            <p style="font-size: 1.25rem; font-weight: 500;">Dinner Under the Stars</p>
+        </div>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <div class="container">
+        <div class="package-details-grid">
+
+            <!-- LEFT COLUMN: DETAILS -->
+            <div class="main-content">
+                <h2>Overview</h2>
+                <p>Step aboard a traditional wooden Dhow boat for a 2-hour evening cruise along the historic Dubai
+                    Creek.
+                    Enjoy a delicious international buffet dinner while gliding past the illuminated souks, heritage
+                    sites,
+                    and modern architecture of old Dubai. The evening includes live entertainment, such as the
+                    mesmerizing
+                    Tanoura dance show, making it a perfect night out for families and couples.</p>
+
+                <h3 style="margin-top: 2rem; color: var(--color-primary-dark);">Tour Highlights</h3>
+                <ul class="highlight-list">
+                    <li>2-Hour Cruising</li>
+                    <li>International Buffet Dinner</li>
+                    <li>Tanoura Dance Show</li>
+                    <li>Welcome Drinks</li>
+                    <li>Soft Background Music</li>
+                    <li>Open Deck Access</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem; color: var(--color-primary-dark);">What's Included?</h3>
+                <p>✅ 2 Hours Cruising on Dubai Creek</p>
+                <p>✅ Buffet Dinner (Veg & Non-Veg)</p>
+                <p>✅ Unlimited Soft Drinks & Water</p>
+                <p>✅ Live Entertainment Shows</p>
+                <p>✅ Separate Toilet Facilities for Men & Women</p>
+
+                <h3 style="margin-top: 2rem; color: var(--color-primary-dark);">Important Information</h3>
+                <p>🕒 <strong>Boarding Time:</strong> 7:45 PM</p>
+                <p>🕒 <strong>Cruising Time:</strong> 8:30 PM - 10:30 PM</p>
+                <p>📍 <strong>Location:</strong> Dubai Creek</p>
+            </div>
+
+            <!-- RIGHT COLUMN: BOOKING -->
+            <div class="booking-sidebar">
+                <h3 style="text-align: center; margin-bottom: 0.5rem;">Book Creek Cruise</h3>
+                <p style="text-align: center; color: var(--color-text-light);">Classic Experience</p>
+
+                <div style="text-align: center; margin: 1.5rem 0;">
+                    <span style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary);">AED 60</span>
+                    <span style="color: var(--color-text-light); font-size: 0.9rem;">/ per person</span>
+                </div>
+
+                <a href="#" class="btn btn-primary" data-whatsapp data-tour-name="CREEK Dhow Cruise"
+                    style="width: 100%; text-align: center; display: block; margin-bottom: 1rem;">
+                    Book via WhatsApp
+                </a>
+
+                <a href="tel:+971564083282" class="btn btn-outline"
+                    style="width: 100%; text-align: center; display: block;">
+                    Call Now
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GALLERY SECTION -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Gallery</h2>
+            <div class="grid grid-3">
+                <img src="images/yacht-cruise.avif" alt="Dhow Boat"
+                    style="border-radius: var(--radius-md); height: 250px; object-fit: cover; width: 100%;">
+                <img src="images/city-lights.avif" alt="Night View"
+                    style="border-radius: var(--radius-md); height: 250px; object-fit: cover; width: 100%;">
+                <img src="images/cultural-tour.avif" alt="Entertainment"
+                    style="border-radius: var(--radius-md); height: 250px; object-fit: cover; width: 100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="background: var(--color-background-light); text-align: center;">
+        <div class="container">
+            <h2>Prefer the Marina Skyline?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">Upgrade to our Marina Dhow Cruise for views of the
+                modern
+                skyscrapers.</p>
+            <a href="package-dhow-cruise-marina.html" class="btn btn-primary btn-lift">View Marina Cruise</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-2026.png" alt="Take My Trip Tourism"
+                        style="height: 60px; margin-bottom: 1rem;">
+                    <p>Your trusted partner for curated Arabian adventures. Creating unforgettable memories since 2020.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" data-whatsapp>WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Popular Tours</h4>
+                    <ul class="footer-links">
+                        <li><a href="tour-desert-safari.html">Desert Safari</a></li>
+                        <li><a href="tour-city-tours.html">City Tours</a></li>
+                        <li><a href="tour-attractions.html">Attractions</a></li>
+                        <li><a href="packages.html">View All</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@takemytriptourism.com</li>
+                        <li>📱 +971 56 408 3282</li>
+                        <li>📍 Dubai, UAE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Take My Trip Tourism. All rights reserved. | <a href="privacy-policy.html">Privacy
+                        Policy</a> |
+                    <a href="terms.html">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY BAR -->
+    <div class="mobile-sticky-bar">
+        <button class="btn btn-whatsapp" data-whatsapp>
+            Chat with Expert
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

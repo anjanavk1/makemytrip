@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Take My Trip Tourism - Your Trusted Partner for Curated Arabian Adventures. Explore luxury desert safaris, city tours, and attraction tickets in Dubai and UAE.">
+  <meta name="keywords" content="Dubai tours, desert safari, UAE travel, luxury tourism, Arabian adventures">
+  <title>Take My Trip Tourism - Curated Arabian Adventures</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hero-carousel.css">
+  <link rel="stylesheet" href="plan-trip-styles.css">
+  <link rel="stylesheet" href="css/mobile-fixes.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <!-- HERO CAROUSEL SECTION (Replaces Header & Old Hero) -->
+  <section class="hero-carousel-section">
+    <!-- Backgrounds -->
+    <div class="hero-bg-container">
+      <!-- Injected by JS -->
+    </div>
+
+    <!-- Glass Header Overlay -->
+    <header class="hero-header">
+      <a href="index.html" class="hero-logo">
+        <img src="images/logo-transparent.png" alt="Take My Trip Tourism">
+      </a>
+
+      <nav class="hero-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="packages.html">Destinations</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="hero-user">
+        <button class="hero-search-btn" aria-label="Search">
+          <svg width="20" height="20" stroke="white" stroke-width="2" fill="none" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <span style="font-weight: 500;">Hello, Traveler!</span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="hero-content">
+      <!-- Left: Text -->
+      <div class="hero-text-content">
+        <div class="hero-pagination">
+          <span class="pagination-current">01</span>
+          <div class="pagination-progress">
+            <div class="pagination-bar"></div>
+          </div>
+          <span class="pagination-total">04</span>
+        </div>
+
+        <h1 class="hero-destination-name">BALI</h1>
+        <p class="hero-description">
+          Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral
+          reefs.
+        </p>
+
+        <div class="hero-cta">
+          <a href="packages.html" class="btn-explore">
+            Explore
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Cards -->
+      <div class="hero-cards-container">
+        <!-- Card 1: Desert Safari -->
+        <a href="tour-desert-safari.html" class="hero-card glass-morphism">
+          <img src="images/desert-safari.avif" alt="Desert Safari" class="hero-card-img" loading="lazy">
+          <div class="hero-card-content">
+            <h3 class="hero-card-title">Desert Safari</h3>
+            <p class="hero-card-subtitle">Dune Bashing & BBQ</p>
+            <div class="hero-card-rating">
+              <span>5.0</span>
+              <svg width="14" height="14" fill="#FFC107" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: City Tours -->
+        <a href="tour-city-tours.html" class="hero-card glass-morphism">
+          <img src="images/city-lights.avif" alt="City Tours" class="hero-card-img" loading="lazy">
+          <div class="hero-card-content">
+            <h3 class="hero-card-title">City Tours</h3>
+            <p class="hero-card-subtitle">Dubai & Abu Dhabi</p>
+            <div class="hero-card-rating">
+              <span>4.9</span>
+              <svg width="14" height="14" fill="#FFC107" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Dhow Cruises -->
+        <a href="tour-dhow-cruises.html" class="hero-card glass-morphism">
+          <img src="images/yacht-cruise.avif" alt="Dhow Cruises" class="hero-card-img" loading="lazy">
+          <div class="hero-card-content">
+            <h3 class="hero-card-title">Dhow Cruises</h3>
+            <p class="hero-card-subtitle">Marina & Creek</p>
+            <div class="hero-card-rating">
+              <span>4.8</span>
+              <svg width="14" height="14" fill="#FFC107" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us-section">
+    <div class="container about-grid">
+      <div class="about-image-col">
+        <img src="images/about-section.avif" alt="Tropical Destination" class="about-main-image">
+      </div>
+      <div class="about-content-col">
+        <h2 class="about-heading">About Us</h2>
+        <p class="about-text">We are passionate travelers helping you explore the world with ease, comfort, and
+          unforgettable experiences. From planning to exploring, we simplify every step of your journey so you can focus
+          on what truly matters—living the adventure.</p>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Destinations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Partner Hotels</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10,000+</span>
+            <span class="stat-label">Trips Booked</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE CATEGORIES -->
+  <section class="section experiences-section">
+    <div class="container">
+      <div class="scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
+        <h2>Explore Our Experiences</h2>
+        <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto;">Discover the magic of Arabia through our
+          carefully curated experiences</p>
+      </div>
+
+      <div class="experience-viewport">
+        <div class="experience-marquee">
+          <!-- First Set of Cards -->
+          <div class="experience-card">
+            <img src="images/desert-safari.avif" alt="Desert Safari" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Desert Safari</span>
+              <span class="experience-rating">5.0 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/city-lights.avif" alt="City Tours" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">City Tours</span>
+              <span class="experience-rating">4.8 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/theme-park.avif" alt="Attraction Tickets" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Attraction Tickets</span>
+              <span class="experience-rating">5.0 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/yacht-cruise.avif" alt="Luxury Yachting" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Luxury Yachting</span>
+              <span class="experience-rating">4.9 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/cultural-tour.avif" alt="Cultural Heritage" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Cultural Heritage</span>
+              <span class="experience-rating">4.7 ⭐</span>
+            </div>
+          </div>
+
+          <!-- Duplicate Set for Seamless Loop -->
+          <div class="experience-card">
+            <img src="images/desert-safari.avif" alt="Desert Safari" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Desert Safari</span>
+              <span class="experience-rating">5.0 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/city-lights.avif" alt="City Tours" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">City Tours</span>
+              <span class="experience-rating">4.8 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/theme-park.avif" alt="Attraction Tickets" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Attraction Tickets</span>
+              <span class="experience-rating">5.0 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/yacht-cruise.avif" alt="Luxury Yachting" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Luxury Yachting</span>
+              <span class="experience-rating">4.9 ⭐</span>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <img src="images/cultural-tour.avif" alt="Cultural Heritage" class="experience-image">
+            <div class="experience-info">
+              <span class="experience-name">Cultural Heritage</span>
+              <span class="experience-rating">4.7 ⭐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us-section">
+    <div class="container bordered-grid">
+      <div class="section-header">
+        <h2 class="why-choose-title">Why choose us?</h2>
+        <p class="why-choose-subtitle">We make every journey smooth, affordable, and unforgettable.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Trusted Partners (Blue) -->
+        <div class="feature-card feature-blue">
+          <div class="icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15l-2 5l9-9l-9 1v-5l2-5l-9 9l9-1z"></path>
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Trusted Partners</h3>
+          <p class="feature-desc">We work only with reliable airlines, hotels, and guides.</p>
+        </div>
+
+        <!-- Feature 2: Seamless Booking (Purple) -->
+        <div class="feature-card feature-purple">
+          <div class="icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">Seamless Booking</h3>
+          <p class="feature-desc">Flights, hotels, and tours in one easy platform.</p>
+        </div>
+
+        <!-- Feature 3: Best Price Guarantee (Cyan) -->
+        <div class="feature-card feature-cyan">
+          <div class="icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 7v2a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V7"></path>
+              <path d="M21 7h-6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h6"></path>
+              <path d="M13 5h8"></path>
+              <path d="M13 19h8"></path>
+              <path d="M7 19H3v-2a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v2"></path>
+              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+              <circle cx="12" cy="12" r="2"></circle>
+              <path d="M6 12h.01M18 12h.01"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Best Price Guarantee</h3>
+          <p class="feature-desc">Exclusive deals you won't find elsewhere.</p>
+        </div>
+
+        <!-- Feature 4: 24/7 Support (Orange) -->
+        <div class="feature-card feature-orange">
+          <div class="icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path
+                d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-desc">Assistance whenever you need it, wherever you are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container testimonials-container">
+      <h2 class="section-heading">What our client say about us</h2>
+
+      <div class="testimonial-wrapper">
+        <div class="testimonial-image-col">
+          <img src="images/traveler-luggage.png" id="testimonial-image" alt="Happy Client">
+        </div>
+        <div class="testimonial-content-col">
+          <div class="review-badge">
+            <span class="star-icon">★</span> Review
+          </div>
+          <blockquote class="testimonial-quote" id="testimonial-quote">
+            "A fantastic experience from start to finish! The team made our trip effortless and memorable with their
+            excellent service and attention to detail. Highly recommend for hassle-free travel planning!"
+          </blockquote>
+
+          <div class="client-info-row">
+            <div class="client-details">
+              <h4 id="client-name">Mohammad Madhu</h4>
+              <p id="client-role">CEO of XYZ Company</p>
+            </div>
+            <div class="star-rating" id="star-rating">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+
+          <div class="testimonial-nav">
+            <button id="prev-btn" class="nav-btn prev" aria-label="Previous Review">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button id="next-btn" class="nav-btn next" aria-label="Next Review">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PLAN YOUR TRIP SECTION -->
+  <section class="section plan-trip-section" id="plan-trip">
+    <!-- Decorative Elements Left -->
+    <div class="deco-container left">
+      <div class="deco-element balloon"></div>
+      <div class="deco-element paper-plane">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+        </svg>
+      </div>
+      <div class="deco-element suitcase">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+      </div>
+      <div class="deco-element compass">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container relative-z">
+      <div class="plan-trip-content-box center-card">
+        <h2 class="plan-trip-title">
+          <span class="text-blue">Start Your Journey</span><br>
+          <span class="text-cyan">Plan Your Trip</span><br>
+          <span class="text-blue">with Us</span>
+        </h2>
+        <p class="plan-trip-subtitle">Contact us to begin planning your next adventure. At Take My Trip Tourism, we
+          turn your travel dreams into reality.</p>
+
+        <div class="plan-trip-features grid-3">
+          <!-- 1. Unique Trips -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Unique Trips</h4>
+              <p>Lots of choices are available, but not all are the same.</p>
+            </div>
+          </div>
+
+          <!-- 2. Expert Guides -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Expert Guides</h4>
+              <p>With so many options, it's important to choose the right one.</p>
+            </div>
+          </div>
+
+          <!-- 3. Competitive Pricing -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Competitive Pricing</h4>
+              <p>Get the best value for your money with our exclusive deals.</p>
+            </div>
+          </div>
+
+          <!-- 4. Simple Booking -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Simple Booking</h4>
+              <p>Book your dream vacation in just a few clicks.</p>
+            </div>
+          </div>
+
+          <!-- 5. Always Available -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Always Available</h4>
+              <p>Our team is ready to assist you anytime, anywhere.</p>
+            </div>
+          </div>
+
+          <!-- 6. Customizable Packages -->
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Customizable</h4>
+              <p>Tailor every aspect of your journey to your preferences.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary btn-lift btn-lg">Start Planning →</a>
+      </div>
+    </div>
+
+    <!-- Decorative Elements Right -->
+    <div class="deco-container right">
+      <div class="deco-element airplane">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" transform="rotate(45 12 12)" />
+        </svg>
+      </div>
+      <div class="deco-element camera">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+      </div>
+      <div class="deco-element passport">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0"></path>
+        </svg>
+      </div>
+      <div class="deco-element globe">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </div>
+      <div class="deco-element palm">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 10l-3 3M16 10l3 3M12 10v10M12 10l-4-6M12 10l4-6M8 10l-2-4M16 10l2-4"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section" style="background: var(--color-background-light);">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+        <div class="scroll-reveal">
+          <h2>Our Story</h2>
+          <p>At Take My Trip Tourism, we specialize in creating unforgettable Arabian adventures. From thrilling desert
+            safaris to cultural city tours, luxury yacht cruises to visa assistance, we offer comprehensive travel
+            solutions tailored to your dreams. Our expert team brings years of experience in UAE tourism, ensuring every
+            journey is seamless and memorable.</p>
+
+
+          <p>We pride ourselves on exceptional customer service, competitive pricing, and authentic experiences. Whether
+            you're exploring Dubai's glittering skyline, discovering Abu Dhabi's rich heritage, or embarking on
+            international adventures, we're your trusted partner in turning travel dreams into reality. Join thousands
+            of satisfied travelers who have explored the world with us.</p>
+
+        </div>
+
+        <div class="scroll-reveal" style="border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="images/about-section.avif" alt="Take My Trip Tourism"
+            style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-grid">
+          <!-- Column 1: Brand & About -->
+          <div class="footer-column brand-column">
+            <a href="index.html" class="footer-logo">
+              <img src="images/logo-new-2026.png" alt="Take My Trip Tourism">
+            </a>
+            <p class="footer-tagline">Your trusted partner for curated Arabian adventures. Creating unforgettable
+              memories since 2020.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg></a>
+              <a href="#" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg></a>
+              <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                  </path>
+                </svg></a>
+              <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-column">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="packages.html">Packages</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#" data-whatsapp>WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Popular Tours -->
+          <div class="footer-column">
+            <h4 class="footer-heading">Popular Tours</h4>
+            <ul class="footer-links">
+              <li><a href="tour-desert-safari.html">Desert Safari</a></li>
+              <li><a href="tour-city-lights.html">City Tours</a></li>
+              <li><a href="tour-dubai-frame.html">Dubai Frame</a></li>
+              <li><a href="tour-burj-khalifa.html">Burj Khalifa</a></li>
+              <li><a href="tour-grand-mosque.html">Grand Mosque</a></li>
+              <li><a href="packages.html">View All Tours →</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact -->
+          <div class="footer-column">
+            <h4 class="footer-heading">Contact Us</h4>
+            <ul class="contact-list">
+              <li>
+                <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg></div>
+                <a href="mailto:info@takemytriptourism.com">info@takemytriptourism.com</a>
+              </li>
+              <li>
+                <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg></div>
+                <div class="contact-text">
+                  <a href="tel:+971564083282">+971 56 408 3282</a>
+                  <span class="badge-success">WhatsApp Available</span>
+                </div>
+              </li>
+              <li>
+                <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg></div>
+                <span>Dubai, UAE</span>
+              </li>
+              <li>
+                <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg></div>
+                <div class="contact-text">
+                  <span>Mon-Sat: 9AM - 8PM</span>
+                  <span>Sunday: 10AM - 6PM</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-grid">
+          <p class="copyright">&copy; 2025 Take My Trip Tourism. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-sticky-bar">
+    <button class="btn btn-whatsapp" data-whatsapp>
+      Chat with Expert
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/testimonials.js"></script>
+  <script src="js/hero-carousel.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

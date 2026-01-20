@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Download Helper - Zorx Travel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00AEEF 0%, #012169 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #012169;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .instructions {
+            background: #f0f9ff;
+            border-left: 4px solid #00AEEF;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .instructions h3 {
+            color: #00AEEF;
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions ol {
+            margin-left: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .image-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .image-card:hover {
+            border-color: #00AEEF;
+            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .image-card h3 {
+            color: #012169;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .filename {
+            background: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        .search-term {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00AEEF;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #0096d1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.4);
+        }
+
+        .btn-secondary {
+            background: #10B981;
+            margin-left: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+        }
+
+        .progress {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            background: #e5e7eb;
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #00AEEF, #10B981);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🖼️ Zorx Travel - Image Download Helper</h1>
+        <p class="subtitle">Download 11 high-quality travel images from Unsplash (free & commercial use)</p>
+
+        <div class="instructions">
+            <h3>📋 Quick Instructions:</h3>
+            <ol>
+                <li>Click "Download from Unsplash" button for each image below</li>
+                <li>On Unsplash, click any image you like, then click "Download free" button</li>
+                <li>Rename the downloaded file to match the filename shown below</li>
+                <li>Move all images to the <code>images</code> folder in your project</li>
+                <li>Refresh your website to see the images!</li>
+            </ol>
+        </div>
+
+        <div class="progress">
+            <strong>Download Progress: <span id="count">0</span>/11 images</strong>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress">0%</div>
+            </div>
+        </div>
+
+        <div class="image-grid">
+            <!-- Image 1 -->
+            <div class="image-card">
+                <h3>1. Hero Background</h3>
+                <div class="filename">hero-dubai-skyline.jpg</div>
+                <div class="search-term">Dubai skyline at sunset</div>
+                <a href="https://unsplash.com/s/photos/dubai-skyline" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/dubai%20skyline/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="image-card">
+                <h3>2. Desert Safari</h3>
+                <div class="filename">desert-safari.jpg</div>
+                <div class="search-term">Desert sand dunes sunset</div>
+                <a href="https://unsplash.com/s/photos/desert-safari" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/desert%20safari/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="image-card">
+                <h3>3. City Lights Tour</h3>
+                <div class="filename">city-lights.jpg</div>
+                <div class="search-term">Dubai night skyline</div>
+                <a href="https://unsplash.com/s/photos/dubai-night" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/dubai%20night/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="image-card">
+                <h3>4. Grand Mosque</h3>
+                <div class="filename">grand-mosque.jpg</div>
+                <div class="search-term">Sheikh Zayed Grand Mosque</div>
+                <a href="https://unsplash.com/s/photos/sheikh-zayed-mosque" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/grand%20mosque/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="image-card">
+                <h3>5. Theme Park</h3>
+                <div class="filename">theme-park.jpg</div>
+                <div class="search-term">Theme park roller coaster</div>
+                <a href="https://unsplash.com/s/photos/theme-park" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/theme%20park/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="image-card">
+                <h3>6. Burj Khalifa</h3>
+                <div class="filename">burj-khalifa.jpg</div>
+                <div class="search-term">Burj Khalifa tower</div>
+                <a href="https://unsplash.com/s/photos/burj-khalifa" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/burj%20khalifa/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="image-card">
+                <h3>7. Yacht Cruise</h3>
+                <div class="filename">yacht-cruise.jpg</div>
+                <div class="search-term">Luxury yacht Dubai Marina</div>
+                <a href="https://unsplash.com/s/photos/yacht-dubai" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/luxury%20yacht/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 8 -->
+            <div class="image-card">
+                <h3>8. Cultural Tour</h3>
+                <div class="filename">cultural-tour.jpg</div>
+                <div class="search-term">Arabian souk marketplace</div>
+                <a href="https://unsplash.com/s/photos/dubai-souk" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/arabian%20market/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 9 -->
+            <div class="image-card">
+                <h3>9. Palm Jumeirah</h3>
+                <div class="filename">palm-jumeirah.jpg</div>
+                <div class="search-term">Palm Jumeirah aerial view</div>
+                <a href="https://unsplash.com/s/photos/palm-jumeirah" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/palm%20jumeirah/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 10 -->
+            <div class="image-card">
+                <h3>10. Miracle Garden</h3>
+                <div class="filename">miracle-garden.jpg</div>
+                <div class="search-term">Colorful flower garden</div>
+                <a href="https://unsplash.com/s/photos/flower-garden" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/flower%20garden/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+
+            <!-- Image 11 -->
+            <div class="image-card">
+                <h3>11. About Section</h3>
+                <div class="filename">about-section.jpg</div>
+                <div class="search-term">Travel agency office</div>
+                <a href="https://unsplash.com/s/photos/travel-planning" target="_blank" class="btn"
+                    onclick="markDownloaded(this)">
+                    Download from Unsplash
+                </a>
+                <a href="https://www.pexels.com/search/travel%20agency/" target="_blank" class="btn btn-secondary">
+                    Pexels
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let downloadedCount = 0;
+
+        function markDownloaded(button) {
+            if (!button.classList.contains('downloaded')) {
+                button.classList.add('downloaded');
+                button.style.background = '#10B981';
+                button.textContent = '✓ Opened';
+                downloadedCount++;
+                updateProgress();
+            }
+        }
+
+        function updateProgress() {
+            const percentage = Math.round((downloadedCount / 11) * 100);
+            document.getElementById('count').textContent = downloadedCount;
+            document.getElementById('progress').style.width = percentage + '%';
+            document.getElementById('progress').textContent = percentage + '%';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Visit Dubai Frame. Walk on the glass bridge and enjoy panoramic views of Old and New Dubai.">
+    <meta name="keywords" content="dubai frame tickets, zabeel park, dubai skyline view, glass bridge dubai">
+    <title>Dubai Frame Tour - Take My Trip Tourism</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .tour-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tour-gallery-item {
+            height: 250px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .tour-gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .tour-hero {
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/city-lights.avif');
+            /* Fallback image as specific frame image missing */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+            border-radius: 0 0 2rem 2rem;
+        }
+
+        .tour-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+            margin-top: -3rem;
+        }
+
+        .booking-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            position: sticky;
+            top: 100px;
+            z-index: 10;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--color-primary);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: var(--color-background-light);
+            border-radius: var(--radius-md);
+        }
+
+        @media (max-width: 968px) {
+            .tour-content-wrapper {
+                grid-template-columns: 1fr;
+                margin-top: 2rem;
+            }
+
+            .booking-widget {
+                position: static;
+                order: -1;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header solid">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-transparent.png" alt="Take My Trip Tourism" class="logo-img">
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn btn-primary btn-whatsapp" data-whatsapp>Chat with Us</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="tour-hero">
+        <div class="container">
+            <h1 class="animate-fadeInUp"
+                style="font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Dubai Frame</h1>
+            <p class="animate-fadeInUp delay-100"
+                style="font-size: 1.5rem; margin-bottom: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">See the Past,
+                Present, and Future of Dubai</p>
+            <div class="animate-fadeInUp delay-200"
+                style="display: flex; gap: 2rem; justify-content: center; align-items: center;">
+                <span
+                    style="background: var(--color-primary); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600;">Starting
+                    AED 50</span>
+                <span>⭐ 4.8 (1000+ Reviews)</span>
+                <span>⏱️ 1-2 Hours</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOUR DETAILS -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Content Wrapper -->
+            <div class="tour-content-wrapper">
+
+                <!-- Left Column: Description -->
+                <div>
+                    <!-- Highlights -->
+                    <div class="scroll-reveal"
+                        style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-bottom: 2rem;">
+                        <h2 style="margin-bottom: 1.5rem;">Key Highlights</h2>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🖼️</span>
+                                <div>
+                                    <strong>Architectural Landmark</strong>
+                                    <p style="font-size: 0.875rem; color: #666;">Largest frame in world</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🌉</span>
+                                <div>
+                                    <strong>Glass Bridge</strong>
+                                    <p style="font-size: 0.875rem; color: #666;">Walk 150m high</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <span style="font-size: 1.5rem;">🕰️</span>
+                                <div>
+                                    <strong>Old & New Views</strong>
+                                    <p style="font-size: 0.875rem; color: #666;">See both sides of city</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="scroll-reveal">
+                        <h3>Experience Overview</h3>
+                        <p>The Dubai Frame is an architectural landmark in Zabeel Park, Dubai. It has been described by
+                            The Guardian newspaper as "the biggest picture frame on the planet. " The project was
+                            conceived by Fernando Donis, and selected as the winner of a design competition by the
+                            Government of Dubai.</p>
+
+                        <p>Take an elevator to the top and walk across the 93-meter long glass bridge. From here, you
+                            get a unique perspective: looking North, you see "Old Dubai" (Deira, Umm Hurair, Karama),
+                            and looking South, you see "New Dubai" (Sheikh Zayed Road, Downtown, Burj Khalifa).</p>
+
+                        <p>On the ground floor museum, experience the "Past Gallery" showing the city's history, and the
+                            "Future Dubai Gallery" which imagines the city 50 years from now using interactive
+                            projections.</p>
+
+                        <h3 style="margin-top: 2rem;">What's Included</h3>
+                        <ul
+                            style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
+                            <li>✅ Entry Ticket to Dubai Frame</li>
+                            <li>✅ Access to Sky Deck (Bridge)</li>
+                            <li>✅ Access to Museum & Gallery</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">What's Not Included</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>❌ Hotel Transfers</li>
+                            <li>❌ Food & Beverages</li>
+                        </ul>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="scroll-reveal">
+                        <h3 style="margin-top: 3rem;">Gallery</h3>
+                        <div class="tour-gallery">
+                            <div class="tour-gallery-item">
+                                <img src="images/city-lights.avif" alt="Dubai Frame View"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="tour-gallery-item">
+                                <img src="images/burj-khalifa.avif" alt="City View"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="scroll-reveal">
+                        <h3 style="margin-top: 3rem;">Frequently Asked Questions</h3>
+                        <div style="margin-top: 1rem;">
+                            <details
+                                style="margin-bottom: 1rem; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 0.5rem;">
+                                <summary style="cursor: pointer; font-weight: 600;">Is it wheelchair accessible?
+                                </summary>
+                                <p style="margin-top: 0.5rem; color: #666;">Yes, the Dubai Frame is fully accessible for
+                                    people of determination.</p>
+                            </details>
+                            <details
+                                style="margin-bottom: 1rem; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 0.5rem;">
+                                <summary style="cursor: pointer; font-weight: 600;">Are strollers allowed?</summary>
+                                <p style="margin-top: 0.5rem; color: #666;">Large strollers must be left at the
+                                    reception counter. Baby carriers are recommended.</p>
+                            </details>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Booking Widget -->
+                <div class="booking-widget scroll-reveal">
+                    <h3 style="margin-bottom: 1.5rem;">Book Tickets</h3>
+
+                    <div style="margin-bottom: 2rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 0.875rem; color: var(--color-text-light);">Starting from</span>
+                            <span style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">AED
+                                50</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #2ecc71; text-align: right; margin-top: 0.25rem;">Instant
+                            Confirmation</p>
+                    </div>
+
+                    <form id="bookingForm">
+                        <div style="margin-bottom: 1rem;">
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.875rem;">Select
+                                Date</label>
+                            <input type="date" required
+                                style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-md);">
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.875rem;">Adults</label>
+                                <input type="number" min="1" value="1"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-md);">
+                            </div>
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.875rem;">Children
+                                    (3-12)</label>
+                                <input type="number" min="0" value="0"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-md);">
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem;"
+                            onclick="window.location.href='contact.html'">Check Availability</button>
+
+                        <button type="button" class="btn btn-whatsapp" data-whatsapp
+                            data-tour-name="Dubai Frame Tickets" style="width: 100%; margin-bottom: 1rem;">
+                            Book on WhatsApp
+                        </button>
+                    </form>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #E2E8F0;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 0.875rem;">Why Book With Us?</h4>
+                        <ul
+                            style="list-style: none; font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
+                            <li>✓ Trusted Vendor</li>
+                            <li>✓ Mobile Tickets</li>
+                            <li>✓ Skip the Queue</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo-transparent.png" alt="Take My Trip Tourism" class="footer-logo-img">
+                    <p>Your trusted partner for curated Arabian adventures. Creating unforgettable memories since 2020.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Popular Tours</h4>
+                    <ul class="footer-links">
+                        <li><a href="tour-desert-safari.html">Desert Safari</a></li>
+                        <li><a href="tour-city-lights.html">City Tours</a></li>
+                        <li><a href="tour-grand-mosque.html">Grand Mosque</a></li>
+                        <li><a href="packages.html">View All</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@takemytriptourism.com</li>
+                        <li>📱 +971 56 408 3282</li>
+                        <li>📍 Dubai, UAE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Take My Trip Tourism. All rights reserved. | <a href="privacy-policy.html">Privacy
+                        Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY BAR -->
+    <div class="mobile-sticky-bar">
+        <button class="btn btn-whatsapp" data-whatsapp data-tour-name="Dubai Frame Tickets">
+            Book Now via WhatsApp
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

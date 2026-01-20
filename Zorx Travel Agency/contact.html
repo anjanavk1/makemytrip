@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Zorx Travel Agency for custom tour packages and enquiries. Get in touch via WhatsApp, email, or our contact form.">
+    <title>Contact Us - Zorx Travel Agency</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #EF4444;
+        }
+
+        .contact-info-card {
+            background: var(--color-background-light);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            transition: transform var(--transition-fast);
+        }
+
+        .contact-info-card:hover {
+            transform: translateX(8px);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-top: 2rem;
+            background: var(--color-background-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header solid">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                ✈️ ZORX TRAVEL
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn btn-primary btn-whatsapp" data-whatsapp>Chat with Us</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section
+        style="background: linear-gradient(135deg, #00AEEF 0%, #012169 100%); padding: 6rem 0 4rem; margin-top: 80px; color: white; text-align: center;">
+        <div class="container">
+            <h1 class="animate-fadeInUp">Get In Touch</h1>
+            <p style="font-size: 1.25rem; margin-top: 1rem;" class="animate-fadeInUp delay-100">We're here to help plan
+                your perfect Arabian adventure</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <div class="scroll-reveal">
+                    <h2>Send Us a Message</h2>
+                    <p style="margin-bottom: 2rem; color: var(--color-text-light);">Fill out the form below and we'll
+                        get back to you within 24 hours</p>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">WhatsApp Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+971 56 408 3282">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Custom Requirements *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Tell us about your travel plans, preferred dates, number of travelers, and any special requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lift" style="width: 100%;">
+                            Send Message
+                        </button>
+
+                        <p
+                            style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light); text-align: center;">
+                            Or contact us directly via WhatsApp for instant response
+                        </p>
+
+                        <button type="button" class="btn btn-whatsapp" data-whatsapp
+                            style="width: 100%; margin-top: 1rem;">
+                            Chat on WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="scroll-reveal">
+                    <h2>Contact Information</h2>
+                    <p style="margin-bottom: 2rem; color: var(--color-text-light);">Reach out to us through any of these
+                        channels</p>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p style="color: var(--color-text-light);">+971 56 408 3282</p>
+                            <p style="font-size: 0.875rem; color: var(--color-text-light);">Available 24/7 for instant
+                                support</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p style="color: var(--color-text-light);">info@zorxtravel.com</p>
+                            <p style="font-size: 0.875rem; color: var(--color-text-light);">We'll respond within 24
+                                hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p style="color: var(--color-text-light);">Dubai, United Arab Emirates</p>
+                            <p style="font-size: 0.875rem; color: var(--color-text-light);">Visit by appointment only
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p style="color: var(--color-text-light);">Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+                            <p style="color: var(--color-text-light);">Friday - Saturday: Closed</p>
+                            <p style="font-size: 0.875rem; color: var(--color-text-light); margin-top: 0.5rem;">WhatsApp
+                                support available 24/7</p>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="map-container">
+                        🗺️
+                    </div>
+                    <p
+                        style="text-align: center; margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-light);">
+                        Dubai, UAE
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" style="background: var(--color-background-light);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Frequently Asked Questions</h2>
+                <p style="font-size: 1.125rem; color: var(--color-text-light);">Quick answers to common questions</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="scroll-reveal-stagger"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <h4>How do I book a tour?</h4>
+                    <p style="color: var(--color-text-light); margin-top: 0.5rem;">Simply click the "Enquire on
+                        WhatsApp" button on any tour page, or fill out our contact form. We'll respond with availability
+                        and booking details within minutes.</p>
+                </div>
+
+                <div class="scroll-reveal-stagger"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <h4>What payment methods do you accept?</h4>
+                    <p style="color: var(--color-text-light); margin-top: 0.5rem;">We accept bank transfers, credit
+                        cards, and cash payments. Payment details will be provided after booking confirmation.</p>
+                </div>
+
+                <div class="scroll-reveal-stagger"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <h4>Can I customize a tour package?</h4>
+                    <p style="color: var(--color-text-light); margin-top: 0.5rem;">Absolutely! We specialize in creating
+                        custom itineraries. Contact us with your requirements and we'll design the perfect experience
+                        for you.</p>
+                </div>
+
+                <div class="scroll-reveal-stagger"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <h4>What is your cancellation policy?</h4>
+                    <p style="color: var(--color-text-light); margin-top: 0.5rem;">Free cancellation up to 24 hours
+                        before the tour. Full refund guaranteed. Contact us for more details.</p>
+                </div>
+
+                <div class="scroll-reveal-stagger"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+                    <h4>Do you provide hotel pickup?</h4>
+                    <p style="color: var(--color-text-light); margin-top: 0.5rem;">Yes! Most of our tours include
+                        complimentary hotel pickup and drop-off from anywhere in Dubai. Specific details are mentioned
+                        in each tour description.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section" style="text-align: center;">
+        <div class="container">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem; color: var(--color-text-light);">Browse our tour
+                packages or get a custom quote today</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="packages.html" class="btn btn-primary btn-lift">Browse Packages</a>
+                <a href="#" class="btn btn-whatsapp btn-lift" data-whatsapp>Chat with Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ZORX TRAVEL</h4>
+                    <p>Your trusted partner for curated Arabian adventures. Creating unforgettable memories since 2020.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" data-whatsapp>WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Popular Tours</h4>
+                    <ul class="footer-links">
+                        <li><a href="tour.html?tour=desert-safari">Desert Safari</a></li>
+                        <li><a href="tour.html?tour=city-lights">City Tours</a></li>
+                        <li><a href="tour.html?tour=grand-mosque">Grand Mosque</a></li>
+                        <li><a href="packages.html">View All</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@zorxtravel.com</li>
+                        <li>📱 +971 56 408 3282</li>
+                        <li>📍 Dubai, UAE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zorx Travel Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY BAR -->
+    <div class="mobile-sticky-bar">
+        <button class="btn btn-whatsapp" data-whatsapp>
+            Chat with Expert
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
