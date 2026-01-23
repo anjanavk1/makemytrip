@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             name: "DUBAI",
-            description: "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa dominates the skyscraper-filled skyline.",
+            description: "Uncover the Magic of Dubai – Thrill in the Dunes, Cruise in Luxury. Curated by Take My Trip – Unforgettable Adventures in the Heart of Arabia.",
             bgImage: "images/dubai-hero-new.png",
             cardImage: "images/card-dubai.png",
             location: "UAE",
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 2,
             name: "DESERT SAFARI",
-            description: "Experience the thrill of dune bashing, camel rides, and traditional entertainment in the golden sands of Arabia.",
+            description: "Voted UAE’s Top Tour Experience – Desert Safari Adventure Awaits!",
             bgImage: "images/desert-safari.avif",
             cardImage: "images/desert-safari-jeep.png",
             location: "Dubai Desert",
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let currentIndex = 0;
-    const slideIntervalTime = 2000;
+    const slideIntervalTime = 5000;
     let slideInterval;
 
     // DOM Elements

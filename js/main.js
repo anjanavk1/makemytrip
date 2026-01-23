@@ -308,3 +308,85 @@ window.TakeMyTripTourism = {
     initScrollReveal,
     debounce
 };
+
+// === LIGHTBOX GALLERY ===
+function initLightbox() {
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+    if (!triggers.length) return;
+
+    // Create/Reuse Overlay
+    let overlay = document.querySelector('.lightbox-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        overlay.innerHTML = `
+            <span class='lightbox-close'>&times;</span>
+            <div class='lightbox-nav lightbox-prev'>&#10094;</div>
+            <div class='lightbox-nav lightbox-next'>&#10095;</div>
+            <div class='lightbox-content'>
+                <img src='' class='lightbox-img' alt='Gallery Image'>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+    }
+
+    const imgElement = overlay.querySelector('.lightbox-img');
+    const closeBtn = overlay.querySelector('.lightbox-close');
+    const prevBtn = overlay.querySelector('.lightbox-prev');
+    const nextBtn = overlay.querySelector('.lightbox-next');
+
+    let currentIndex = 0;
+    let currentTriggers = [];
+
+    // Open Lightbox
+    triggers.forEach((trigger, index) => {
+        trigger.addEventListener('click', () => {
+            // Group triggers closer in DOM if needed, for now use all triggers on page
+            // For more complex pages, we might want to group by '.gallery-container'
+            console.log('Gallery image clicked:', trigger.src);
+            currentTriggers = Array.from(triggers);
+            currentIndex = currentTriggers.indexOf(trigger);
+            updateImage();
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    function updateImage() {
+        const trigger = currentTriggers[currentIndex];
+        const src = trigger.dataset.src || trigger.src;
+        imgElement.src = src;
+    }
+
+    // Navigation
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentTriggers.length;
+        updateImage();
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentTriggers.length) % currentTriggers.length;
+        updateImage();
+    });
+
+    // Close
+    const closeLightbox = () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextBtn.click();
+        if (e.key === 'ArrowLeft') prevBtn.click();
+    });
+}
+
+// Add to init list
+document.addEventListener('DOMContentLoaded', initLightbox);

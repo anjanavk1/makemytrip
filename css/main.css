@@ -399,7 +399,8 @@ p {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text);
-  height: 50px;
+  min-height: 50px;
+  height: auto;
 }
 
 .card-description {
@@ -1719,79 +1720,165 @@ p {
 @media (min-width: 1024px) and (max-width: 1440px) {
   /* Zoom removed - causes mobile issues */
 }
+
 /* === FLOATING ACTION BUTTONS === */
 .floating-buttons-container {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
 }
 
 .floating-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .floating-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .floating-btn svg {
-    width: 30px;
-    height: 30px;
-    fill: white;
+  width: 30px;
+  height: 30px;
+  fill: white;
 }
 
 .floating-btn-whatsapp {
-    background-color: #25D366;
+  background-color: #25D366;
 }
 
 .floating-btn-call {
-    background-color: #0B5F8C; /* Brand primary */
+  background-color: #0B5F8C;
+  /* Brand primary */
 }
 
 @media (max-width: 768px) {
-    .floating-buttons-container {
-        bottom: 90px; /* Account for mobile sticky bar */
-        right: 20px;
-    }
-    
-    .floating-btn {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .floating-btn svg {
-        width: 24px;
-        height: 24px;
-    }
+  .floating-buttons-container {
+    bottom: 90px;
+    /* Account for mobile sticky bar */
+    right: 20px;
+  }
+
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-btn svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 
 /* === FULL WIDTH MAP === */
 .map-section-full {
-    width: 100%;
-    height: 450px;
-    margin-top: 0;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  height: 450px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .map-section-full iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block; /* Removes bottom space */
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  /* Removes bottom space */
 }
 
+
+/* === LIGHTBOX GALLERY === */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-trigger {
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.lightbox-trigger:hover {
+  filter: brightness(1.1);
+}
